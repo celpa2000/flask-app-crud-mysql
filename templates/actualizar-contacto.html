@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block titulo %}
+    Actualizar contactos
+{% endblock %}
+{% block content %}
+<div class="container col-sm-4">
+    <form class=" m-2" action="/actualizarcontacto/{{contactos.0}}" method="post">
+        <input class="form-control" type="text" name="nombre" placeholder="Nombre" value="{{contactos.1}}">
+        <input class="form-control" type="text" name="apellido" placeholder="Apellido" value="{{contactos.2}}">
+        <input class="form-control" type="text" name="telefono" placeholder="Telefono" value="{{contactos.3}}">
+        <input class="form-control" type="text" name="correo" placeholder="Email" value="{{contactos.4}}">
+        <div class="d-flex w-auto justify-content-center p-3">
+            <button class="btn btn-primary w-50 " type="submit">
+                Guardar
+            </button>
+        </div>
+
+       
+    </form>
+</div>
+
+{% endblock %}
